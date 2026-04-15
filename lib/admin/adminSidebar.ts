@@ -8,12 +8,17 @@ import { TbBrandProducthunt } from "react-icons/tb";
 import { IoMdStarOutline } from "react-icons/io";
 // import { ADMIN_MEDIA_SHOW } from "../routes/AdminPanelRoute";
 import { SidebarMenuItem } from "@/types/sidebar";
+import {
+	ADMIN_DASHBOARD,
+	ADMIN_ADD_CATEGORY_ADD,
+	ADMIN_CATEGORY_SHOW,
+} from "@/routes/AdminPanelRoute";
 
 const adminAppSidebarMenu: SidebarMenuItem[] = [
 	{
 		title: "Dashboard",
 		icon: AiOutlineDashboard,
-		url: "/admin/dashboard",
+		url: ADMIN_DASHBOARD,
 	},
 	{
 		title: "Categories",
@@ -22,12 +27,12 @@ const adminAppSidebarMenu: SidebarMenuItem[] = [
 		submenu: [
 			{
 				title: "Add Category",
-				url: "/admin/categories/add",
+				url: ADMIN_ADD_CATEGORY_ADD,
 				icon: BiCategory,
 			},
 			{
 				title: "All Category",
-				url: "/admin/categories",
+				url: ADMIN_CATEGORY_SHOW,
 				icon: BiCategory,
 			},
 		],

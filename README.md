@@ -19,3 +19,6 @@
 সাইডবার wrapper div-এ hidden md:block যোগ করা হয়েছে — এতে মোবাইলে সাইডবার লুকিয়ে যাবে, শুধু ডেস্কটপে (md+) দেখা যাবে।
 মোবাইলের জন্য আলাদা একটি <div className="md:hidden"> এ <AppSidebar /> রেন্ডার করা হয়েছে — এটি shadcn/ui-এর Sheet (drawer) হিসেবে কাজ করবে মোবাইলে।
 Main content div-এ min-w-0 যোগ করা হয়েছে যাতে flex overflow ঠিক থাকে।
+
+React Hook from
+A. Install react hook from, zodResolver

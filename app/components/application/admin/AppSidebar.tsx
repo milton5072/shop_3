@@ -58,14 +58,20 @@ const AppSidebar = () => {
 			<SidebarContent className="p-2">
 				<SidebarMenu>
 					{adminAppSidebarMenu.map((menu, index) => (
-						<Collapsible key={index} className="group/collapsible">
+						<Collapsible
+							key={index}
+							className="group/collapsible"
+						>
 							<SidebarMenuItem>
 								<CollapsibleTrigger asChild>
 									<SidebarMenuButton
 										asChild
 										className="font-semibold px-2 py-5"
 									>
-										<Link href="">
+										<Link
+											href={menu.url || "#"}
+											className="w-full flex items-center"
+										>
 											<menu.icon />
 											<span>{menu.title}</span>
 											{menu?.submenu && menu.submenu.length > 0 && (
