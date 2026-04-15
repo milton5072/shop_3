@@ -9,6 +9,7 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
+	useSidebar,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,7 +18,7 @@ import logoWhite from "@/public/file.svg";
 import { Button } from "@/components/ui/button";
 import { LuChevronRight } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
-import adminSidebar from "@/lib/admin/adminSidebar";
+// import adminSidebar from "@/lib/admin/adminSidebar";
 import {
 	Collapsible,
 	CollapsibleContent,
@@ -25,6 +26,7 @@ import {
 } from "@/components/ui/collapsible";
 import adminAppSidebarMenu from "@/lib/admin/adminSidebar";
 const AppSidebar = () => {
+	const { toggleSidebar } = useSidebar();
 	return (
 		<Sidebar>
 			<SidebarHeader className="border-b">
@@ -47,6 +49,7 @@ const AppSidebar = () => {
 						type="button"
 						size="icon"
 						className="md:hidden"
+						onClick={toggleSidebar}
 					>
 						<IoMdClose size={20} />
 					</Button>
@@ -55,10 +58,7 @@ const AppSidebar = () => {
 			<SidebarContent className="p-2">
 				<SidebarMenu>
 					{adminAppSidebarMenu.map((menu, index) => (
-						<Collapsible
-							key={index}
-							className="group/collapsible"
-						>
+						<Collapsible key={index} className="group/collapsible">
 							<SidebarMenuItem>
 								<CollapsibleTrigger asChild>
 									<SidebarMenuButton
