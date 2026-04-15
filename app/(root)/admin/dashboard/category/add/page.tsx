@@ -31,9 +31,22 @@ export default function AddCategory() {
 		},
 	});
 
-	const onSubmit = (data: CategoryFormValues) => {
-		console.log("Submitted Data:", data);
-		// এখানে API call দিবে
+	const onSubmit = async (data: CategoryFormValues) => {
+		try {
+			const res = await fetch("/api/category", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			const result = await res.json();
+
+			console.log(result);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	return (

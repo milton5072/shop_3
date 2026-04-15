@@ -22,3 +22,23 @@ Main content div-এ min-w-0 যোগ করা হয়েছে যাতে
 
 React Hook from
 A. Install react hook from, zodResolver
+
+Backend Full TODO List (Step by Step) for adding category in db.
+🔹 Step 1: MongoDB connection setup
+🔹 Step 2: Category Model তৈরি
+🔹 Step 3: API Route (POST) তৈরি
+🔹 Step 4: Frontend থেকে API call
+🔹 Step 5: Error handling + validation
+
+- Work flow
+  User Form Fillup
+  ↓
+  React Hook Form
+  ↓
+  POST /api/category
+  ↓
+  Next.js API
+  ↓
+  MongoDB (Mongoose)
+  ↓
+  Response ফিরে আসে
